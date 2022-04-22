@@ -25,6 +25,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "createSimpleStorageContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "favoriteNumber",
 				"outputs": [
 					{
@@ -96,6 +103,62 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfGet",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "simpleStorageArray",
+				"outputs": [
+					{
+						"internalType": "contract SimpleStorage",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_favoriteNumber",
 						"type": "uint256"
 					}
@@ -115,7 +178,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleStorage.sol": "SimpleStorage"
+			"contracts/StorageFactory.sol": "StorageFactory"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -135,6 +198,14 @@
 			"urls": [
 				"bzz-raw://67c60145e51647fb8e22025ab09b0bace9620b9396c8d760e8e415b0653d09c3",
 				"dweb:/ipfs/QmVvL9LkQvQrP1w7j9neSnoBSBsG8Adz5kY19xKpVbusQg"
+			]
+		},
+		"contracts/StorageFactory.sol": {
+			"keccak256": "0x2952a6f2b50e9ce762209dabaedb93893e36d476087e19803ad9fe9b5036cb44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ed61d6f6803aaa7d9693dace21ae89f3c6b2dec031fbfd74775f9ce79c701f19",
+				"dweb:/ipfs/QmYeoDyBkQCZbPNrKo5KAarnobLDx5n6S6saiLomztBZbt"
 			]
 		}
 	},
