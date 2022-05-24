@@ -1,0 +1,134 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_option",
+						"type": "string"
+					}
+				],
+				"name": "createOptions",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_optionid",
+						"type": "uint256"
+					}
+				],
+				"name": "getOptionStructure",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string[]",
+								"name": "name",
+								"type": "string[]"
+							}
+						],
+						"internalType": "struct StructArrayInitWrong.Option",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
+					}
+				],
+				"name": "getResultOptions",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string[]",
+								"name": "name",
+								"type": "string[]"
+							}
+						],
+						"internalType": "struct StructArrayInitWrong.Option",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "optionCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/shit.sol": "StructArrayInitWrong"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/shit.sol": {
+			"keccak256": "0xec5724c907ced0eaaeec7847cc3f0af89f795fa5d1139d9aca08ef77d6d2bed5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://460b8c4107df92c71eed0bf52735a7bb9c8f93f30281546ffce041fe886203a8",
+				"dweb:/ipfs/Qma9H7gMr2UY6RHaCZMtyFfxwg5EBvMMdqAKuPRSsKcKwN"
+			]
+		}
+	},
+	"version": 1
+}

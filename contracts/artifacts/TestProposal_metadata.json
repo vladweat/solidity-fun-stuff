@@ -1,0 +1,182 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_proposalId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_proposalStatus",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_proposalCreator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_proposalNumOfOptions",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_proposalOptionsString",
+						"type": "string"
+					}
+				],
+				"name": "addProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "getProposalStructure",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "proposalId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "proposalStatus",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "proposalCreator",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "proposalNumOfOptions",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "proposalOptionsString",
+								"type": "string"
+							}
+						],
+						"internalType": "struct TestProposal.Proposal",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "proposalCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "proposals",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "proposalStatus",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "proposalCreator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "proposalNumOfOptions",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "proposalOptionsString",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proposal.sol": "TestProposal"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proposal.sol": {
+			"keccak256": "0xebe69ddd5874201793283a025b6f4dcd3ff278ff1adbbae69ee10b5a735b8836",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://11c007ae2fe96d24e54caca31cc1c8aeb21a9a9daf56d00a2a17a015251d1cec",
+				"dweb:/ipfs/QmdpshHdvsruMWZWLiKeU15o73sHeQ5uHpfEc6iHGYVUB3"
+			]
+		}
+	},
+	"version": 1
+}

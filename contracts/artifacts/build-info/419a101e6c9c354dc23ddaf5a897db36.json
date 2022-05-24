@@ -1,0 +1,637 @@
+{
+	"id": "419a101e6c9c354dc23ddaf5a897db36",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.6.0",
+	"solcLongVersion": "0.6.0+commit.26b70077",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/proposal.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma experimental ABIEncoderV2;\r\npragma solidity ^0.6.0;\r\n\r\ncontract Proposal {\r\n    \r\n    struct Proposal{\r\n        uint proposalId;\r\n        uint proposalStatus;\r\n        uint proposalCreator;\r\n        mapping (uint => Voter) voters;\r\n        mapping (uint => proposalOption) options;\r\n    }\r\n\r\n    struct proposalOption{\r\n        string option;\r\n    }\r\n\r\n    struct Voter{\r\n        uint id;\r\n        string voterAddress;\r\n        bool isVoted;\r\n    }    \r\n\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/proposal.sol": {
+				"Proposal": {
+					"abi": [],
+					"devdoc": {
+						"methods": {}
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/proposal.sol\":95:497  contract Proposal {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    /* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":30:31   */\n  0x00\n    /* \"--CODEGEN--\":27:28   */\n  dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\ntag_1:\n    /* \"contracts/proposal.sol\":95:497  contract Proposal {\r... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/proposal.sol\":95:497  contract Proposal {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa264697066735822122077c51c7f91ed21aef44f0f37f6198b176477ea1a871ccb0c7c0902daa086f78364736f6c63430006000033\n}\n",
+						"bytecode": {
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122077c51c7f91ed21aef44f0f37f6198b176477ea1a871ccb0c7c0902daa086f78364736f6c63430006000033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH24 0xC51C7F91ED21AEF44F0F37F6198B176477EA1A871CCB0C7C MULMOD MUL 0xDA LOG0 DUP7 0xF7 DUP4 PUSH5 0x736F6C6343 STOP MOD STOP STOP CALLER ",
+							"sourceMap": "95:402:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:402:0;;;;;;;"
+						},
+						"deployedBytecode": {
+							"linkReferences": {},
+							"object": "6080604052600080fdfea264697066735822122077c51c7f91ed21aef44f0f37f6198b176477ea1a871ccb0c7c0902daa086f78364736f6c63430006000033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH24 0xC51C7F91ED21AEF44F0F37F6198B176477EA1A871CCB0C7C MULMOD MUL 0xDA LOG0 DUP7 0xF7 DUP4 PUSH5 0x736F6C6343 STOP MOD STOP STOP CALLER ",
+							"sourceMap": "95:402:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH",
+									"value": "80"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "CALLVALUE"
+								},
+								{
+									"begin": 8,
+									"end": 17,
+									"name": "DUP1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "ISZERO"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "PUSH [tag]",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPI"
+								},
+								{
+									"begin": 30,
+									"end": 31,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 28,
+									"name": "DUP1"
+								},
+								{
+									"begin": 20,
+									"end": 32,
+									"name": "REVERT"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "tag",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPDEST"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "POP"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH #[$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "DUP1"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH [$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 95,
+									"end": 497,
+									"name": "RETURN"
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122077c51c7f91ed21aef44f0f37f6198b176477ea1a871ccb0c7c0902daa086f78364736f6c63430006000033",
+									".code": [
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "PUSH",
+											"value": "80"
+										},
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "PUSH",
+											"value": "40"
+										},
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "MSTORE"
+										},
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "DUP1"
+										},
+										{
+											"begin": 95,
+											"end": 497,
+											"name": "REVERT"
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/proposal.sol\":\"Proposal\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/proposal.sol\":{\"keccak256\":\"0x9a4334181abbcc1ce80d716ae9c837bc8982322c6b10431d002923d3d2a83069\",\"urls\":[\"bzz-raw://e11553f30eb30860c225675c09eb071e0e3a3713fe0b2bdfe75d82e6d315e1a7\",\"dweb:/ipfs/QmanwXJa6r2Ff1bdCLCM89iaCw6bAy4YBQKAc1QfvuKYxG\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"methods": {}
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"formattedMessage": "contracts/proposal.sol:7:5: Warning: This declaration shadows an existing declaration.\n    struct Proposal{\r\n    ^ (Relevant source part starts here and spans across multiple lines).\ncontracts/proposal.sol:5:1: The shadowed declaration is here:\ncontract Proposal {\r\n^ (Relevant source part starts here and spans across multiple lines).\n",
+				"message": "This declaration shadows an existing declaration.",
+				"secondarySourceLocations": [
+					{
+						"end": 497,
+						"file": "contracts/proposal.sol",
+						"message": "The shadowed declaration is here:",
+						"start": 95
+					}
+				],
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 328,
+					"file": "contracts/proposal.sol",
+					"start": 126
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/proposal.sol": {
+				"ast": {
+					"absolutePath": "contracts/proposal.sol",
+					"exportedSymbols": {
+						"Proposal": [
+							28
+						]
+					},
+					"id": 29,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"experimental",
+								"ABIEncoderV2"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:33:0"
+						},
+						{
+							"id": 2,
+							"literals": [
+								"solidity",
+								"^",
+								"0.6",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "68:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": null,
+							"fullyImplemented": true,
+							"id": 28,
+							"linearizedBaseContracts": [
+								28
+							],
+							"name": "Proposal",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "Proposal.Proposal",
+									"id": 17,
+									"members": [
+										{
+											"constant": false,
+											"id": 4,
+											"name": "proposalId",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 17,
+											"src": "152:15:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 3,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "152:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 6,
+											"name": "proposalStatus",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 17,
+											"src": "178:19:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 5,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "178:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 8,
+											"name": "proposalCreator",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 17,
+											"src": "208:20:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 7,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "208:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 12,
+											"name": "voters",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 17,
+											"src": "239:30:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Voter_$27_storage_$",
+												"typeString": "mapping(uint256 => struct Proposal.Voter)"
+											},
+											"typeName": {
+												"id": 11,
+												"keyType": {
+													"id": 9,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "248:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"nodeType": "Mapping",
+												"src": "239:23:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Voter_$27_storage_$",
+													"typeString": "mapping(uint256 => struct Proposal.Voter)"
+												},
+												"valueType": {
+													"contractScope": null,
+													"id": 10,
+													"name": "Voter",
+													"nodeType": "UserDefinedTypeName",
+													"referencedDeclaration": 27,
+													"src": "256:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_struct$_Voter_$27_storage_ptr",
+														"typeString": "struct Proposal.Voter"
+													}
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 16,
+											"name": "options",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 17,
+											"src": "280:40:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_proposalOption_$20_storage_$",
+												"typeString": "mapping(uint256 => struct Proposal.proposalOption)"
+											},
+											"typeName": {
+												"id": 15,
+												"keyType": {
+													"id": 13,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "289:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"nodeType": "Mapping",
+												"src": "280:32:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_proposalOption_$20_storage_$",
+													"typeString": "mapping(uint256 => struct Proposal.proposalOption)"
+												},
+												"valueType": {
+													"contractScope": null,
+													"id": 14,
+													"name": "proposalOption",
+													"nodeType": "UserDefinedTypeName",
+													"referencedDeclaration": 20,
+													"src": "297:14:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_struct$_proposalOption_$20_storage_ptr",
+														"typeString": "struct Proposal.proposalOption"
+													}
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										}
+									],
+									"name": "Proposal",
+									"nodeType": "StructDefinition",
+									"scope": 28,
+									"src": "126:202:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Proposal.proposalOption",
+									"id": 20,
+									"members": [
+										{
+											"constant": false,
+											"id": 19,
+											"name": "option",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 20,
+											"src": "368:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 18,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "368:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										}
+									],
+									"name": "proposalOption",
+									"nodeType": "StructDefinition",
+									"scope": 28,
+									"src": "336:53:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Proposal.Voter",
+									"id": 27,
+									"members": [
+										{
+											"constant": false,
+											"id": 22,
+											"name": "id",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 27,
+											"src": "420:7:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 21,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "420:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 24,
+											"name": "voterAddress",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 27,
+											"src": "438:19:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 23,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "438:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 26,
+											"name": "isVoted",
+											"nodeType": "VariableDeclaration",
+											"overrides": null,
+											"scope": 27,
+											"src": "468:12:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 25,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "468:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										}
+									],
+									"name": "Voter",
+									"nodeType": "StructDefinition",
+									"scope": 28,
+									"src": "397:91:0",
+									"visibility": "public"
+								}
+							],
+							"scope": 29,
+							"src": "95:402:0"
+						}
+					],
+					"src": "33:466:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

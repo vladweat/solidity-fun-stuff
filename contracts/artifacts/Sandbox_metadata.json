@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newValue",
+						"type": "string"
+					}
+				],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSt",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/sandbox.sol": "Sandbox"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/sandbox.sol": {
+			"keccak256": "0xb8216eccb3ed6d49c13c32957a123bc6a072806f1781aad32c8eaa636727e1b5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ffe3b40d5884cfd9df47d06a23854da4aa98b872cebdf4395f21538cda535469",
+				"dweb:/ipfs/QmSHmEoUEajvtAwT3i4iRWZGqCayFB1Lp1AD6qwdf7w6tv"
+			]
+		}
+	},
+	"version": 1
+}
