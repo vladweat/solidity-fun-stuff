@@ -1,15 +1,10 @@
 {
 	"compiler": {
-		"version": "0.8.0+commit.c7dfd78e"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
-			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
 			{
 				"inputs": [
 					{
@@ -157,7 +152,7 @@
 		"compilationTarget": {
 			"contracts/proposal.sol": "TestProposal"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -170,11 +165,11 @@
 	},
 	"sources": {
 		"contracts/proposal.sol": {
-			"keccak256": "0xebe69ddd5874201793283a025b6f4dcd3ff278ff1adbbae69ee10b5a735b8836",
+			"keccak256": "0xb8b3cda66774f432842cb3edb06541a24b6354422064294c453ea06a174512b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://11c007ae2fe96d24e54caca31cc1c8aeb21a9a9daf56d00a2a17a015251d1cec",
-				"dweb:/ipfs/QmdpshHdvsruMWZWLiKeU15o73sHeQ5uHpfEc6iHGYVUB3"
+				"bzz-raw://592ee43b4d2c0ba6b9d0baf8ec8e0c87b74dddcf638abff81fcd5c16cc84bd67",
+				"dweb:/ipfs/QmVmyagYozofgJuGRvZ9irQuQYJRnjir4jYayQLy7qV4o2"
 			]
 		}
 	},

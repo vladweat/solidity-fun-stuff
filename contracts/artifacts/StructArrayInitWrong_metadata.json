@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.0+commit.c7dfd78e"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -109,7 +109,7 @@
 		"compilationTarget": {
 			"contracts/shit.sol": "StructArrayInitWrong"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -122,11 +122,11 @@
 	},
 	"sources": {
 		"contracts/shit.sol": {
-			"keccak256": "0xec5724c907ced0eaaeec7847cc3f0af89f795fa5d1139d9aca08ef77d6d2bed5",
+			"keccak256": "0x9af805963eccbd20067a434270b0b91709f6192be8ef170c89206aaf4c4eae71",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://460b8c4107df92c71eed0bf52735a7bb9c8f93f30281546ffce041fe886203a8",
-				"dweb:/ipfs/Qma9H7gMr2UY6RHaCZMtyFfxwg5EBvMMdqAKuPRSsKcKwN"
+				"bzz-raw://785ba090184afad6525760e69543db00f1ae9203bdac1212aab127f0a4c9ad84",
+				"dweb:/ipfs/QmZNzzrhmdo7FU16FszrxZCyZz9FTaqpnG4FgT3UqfLR8H"
 			]
 		}
 	},
