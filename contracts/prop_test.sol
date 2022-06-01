@@ -3,13 +3,12 @@ pragma solidity ^0.8.0;
 
 contract Ballot {
 
-    address internal chairperson;
+    address internal creator;
     uint internal status;
     uint internal startDate;
     uint internal endDate;
     uint internal numOfProposals;
 
-//1654019749
     struct Voter {
         uint weight; // weight is accumulated by delegation
         bool voted;  // if true, that person already voted
@@ -19,7 +18,7 @@ contract Ballot {
 
     // This is a type for a single proposal.
     struct Proposal {
-        string name;   // short name (up to 32 bytes)
+        string name;   // short name
         uint voteCount; // number of accumulated votes
     }
 
@@ -31,9 +30,10 @@ contract Ballot {
     Proposal[] public proposals;
 
     function createBallot(string[] memory proposalNames) public {
-        chairperson = msg.sender;
-        voters[chairperson].weight = 1;
+        creator = msg.sender;
+        voters[creator].weight = 1;
 
+        status = 0;
         setStartDate();
         numOfProposals = proposalNames.length;
 
@@ -59,7 +59,7 @@ contract Ballot {
         // called incorrectly. But watch out, this
         // will currently also consume all provided gas
         // (this is planned to change in the future).
-        require((msg.sender == chairperson) && !voters[voter].voted && (voters[voter].weight == 0));
+        require((msg.sender == creator) && !voters[voter].voted && (voters[voter].weight == 0));
         voters[voter].weight = 1;
     }
 
@@ -97,7 +97,7 @@ contract Ballot {
     // ----------------------------------------------------------------------------------------------------------------//
     // return creator address of ballot
     function getCreatorBallot() public view returns(address){
-        return chairperson;
+        return creator;
     }
 
     // return status of proposals
@@ -126,7 +126,7 @@ contract Ballot {
     }
 
     // set starting date of ballot
-    function setStartDate() internal{
+    function setStartDate() internal {
         startDate = block.timestamp;
     }
     // get starting date of ballot
@@ -135,7 +135,7 @@ contract Ballot {
     }
 
     // set ending date of ballot
-    function setEndDate() internal{
+    function setEndDate() public{
         endDate = block.timestamp;
     }
     // get ending date of ballot

@@ -177,6 +177,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "setEndDate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -291,11 +298,11 @@
 	},
 	"sources": {
 		"contracts/prop_test.sol": {
-			"keccak256": "0x1b379c5ec41695b9e42969faacde7b0cb6b8571f2cdd1b41e5ec15b85d14d951",
+			"keccak256": "0xa0df04b61084837d0c48aca156562a0e3d44dfea26e780506d1e9265d76e2c16",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1ef3901dfc8480099f9daa6e3cbc7188625bc58fb1a501912ad3780d9719240a",
-				"dweb:/ipfs/QmQT2rYGLNpRWzHaNKseZQZq56Gue8GPBm1wSLNi56gGM1"
+				"bzz-raw://b06a2c73ecf867d667324e1e429c70a6572fa6cb639f73e114043c1717b0c758",
+				"dweb:/ipfs/QmRJCWDqZTLYzwynhEV1Z4hrdGT9tzmDHBoMmiJdQMVuDx"
 			]
 		}
 	},
